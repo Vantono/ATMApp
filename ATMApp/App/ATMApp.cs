@@ -55,18 +55,17 @@ namespace ATMApp.App
         {
             bool isCorrectionLogin = false;
 
-            UserAccount tempUserAccount = new UserAccount();
-            tempUserAccount.CardNumber = Validator.Convert<long>("your card number");
-            tempUserAccount.CardPin = Convert.ToInt32(Utility.GetSecretInput("Enter your card ping"));
+            UserLoginForm();
             Console.WriteLine("Checking Card Number and Pin...");
             int timer = 10;
-            for (int i = 0;i < timer;i++)
+            for (int i = 0; i < timer; i++)
             {
                 Console.WriteLine(".");
                 Thread.Sleep(200);
             }
             Console.Clear();
         }
+
 
     }
 }
